@@ -24,7 +24,7 @@ public class removeLastTElement {
 		this.miListaVacia = new SingleLinkedListImpl<>();
 		assertThrows(EmptyCollectionException.class, () -> {
 		String elemento;
-		elemento = this.miListaVacia.removeLast();
+		elemento = this.miListaVacia.removeLast("C");
 	  });
 	 
 	}
@@ -34,7 +34,7 @@ public class removeLastTElement {
 	public void excepcionElementoNoLista() {
 		this.miListaSinElemento = new SingleLinkedListImpl<>("A", "B", "D");
 		assertThrows(java.util.NoSuchElementException.class, () -> {
-		String elemento = this.miListaSinElemento.removeLast("C");
+		String elemento = this.miListaSinElemento.removeLast("X");
 	  });
 	 
 	}
