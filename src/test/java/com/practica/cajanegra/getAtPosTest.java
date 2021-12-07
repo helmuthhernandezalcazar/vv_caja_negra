@@ -11,7 +11,7 @@ import org.junit.jupiter.params.provider.ValueSource;
 
 import com.cajanegra.SingleLinkedListImpl;
 
-class getAtPos {
+class getAtPosTest {
 	private SingleLinkedListImpl<String> lista;
 	
 	@BeforeEach

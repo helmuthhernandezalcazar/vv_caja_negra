@@ -18,7 +18,7 @@ public class AddFirstTest {
 	@ValueSource(strings= {"A", "B", "M", "Y", "Z", "@", "["} )
 	public void addFirst(String s) {
 		this.lista.addFirst(s);
-		assertEquals("["+ s + " ,A, S, C, I]", this.lista.toString());	
+		assertEquals("["+ s + ", A, S, C, I]", this.lista.toString());	
 	}
 	
 }

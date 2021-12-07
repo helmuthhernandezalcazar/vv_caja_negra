@@ -11,7 +11,7 @@ import org.junit.rules.ExpectedException;
 import com.cajanegra.EmptyCollectionException;
 import com.cajanegra.SingleLinkedListImpl;
 
-public class removeLast {
+public class removeLastTest {
 	private SingleLinkedListImpl<String> miLista;
 	private SingleLinkedListImpl<String> miListaVacia;
 	

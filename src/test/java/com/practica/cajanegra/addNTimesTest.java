@@ -9,7 +9,7 @@ import org.junit.jupiter.params.provider.ValueSource;
 
 import com.cajanegra.SingleLinkedListImpl;
 
-public class addNTimes {
+public class addNTimesTest {
 private SingleLinkedListImpl<String> lista;
 	
 	@BeforeEach

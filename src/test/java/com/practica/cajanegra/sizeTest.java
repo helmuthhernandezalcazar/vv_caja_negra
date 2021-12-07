@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 
 import com.cajanegra.SingleLinkedListImpl;
 
-class size {
+class sizeTest {
 	private SingleLinkedListImpl<String> listaVacia = new SingleLinkedListImpl<String>();
 	private SingleLinkedListImpl<String> listaConElementos = new SingleLinkedListImpl<String>("A", "B", "M", "Y", "Z");
 	

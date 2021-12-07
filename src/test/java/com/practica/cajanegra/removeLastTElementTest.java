@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 import com.cajanegra.EmptyCollectionException;
 import com.cajanegra.SingleLinkedListImpl;
 
-public class removeLastTElement {
+public class removeLastTElementTest {
 	private SingleLinkedListImpl<String> miLista;
 	private SingleLinkedListImpl<String> miListaVacia;
 	private SingleLinkedListImpl<String> miListaSinElemento;
@@ -23,8 +23,7 @@ public class removeLastTElement {
 	public void excepcionListaVacia() {
 		this.miListaVacia = new SingleLinkedListImpl<>();
 		assertThrows(EmptyCollectionException.class, () -> {
-		String elemento;
-		elemento = this.miListaVacia.removeLast("C");
+		String elemento = this.miListaVacia.removeLast("C");
 	  });
 	 
 	}

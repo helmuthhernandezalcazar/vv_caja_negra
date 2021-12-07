@@ -8,7 +8,7 @@ import org.junit.jupiter.params.provider.ValueSource;
 
 import com.cajanegra.SingleLinkedListImpl;
 
-public class addLast {
+public class addLastTest {
 	private SingleLinkedListImpl<String> miLista;
 	
 	@BeforeEach
