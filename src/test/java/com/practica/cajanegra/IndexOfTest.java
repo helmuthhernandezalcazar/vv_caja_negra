@@ -18,8 +18,8 @@ public class IndexOfTest {
 	@ParameterizedTest(name="Posición primera aparición de {0}")
 	@ValueSource(strings= {"A", "B", "M", "Y", "Z", "@", "["})
 	public void IndexOfSEnLista(String s) {
-		
 		this.lista = new SingleLinkedListImpl<String>("A", "S", "C", "I", "B", "Y", "Z", "B", "B", "M", "@", "[", "@");
+		
 		Map<String, Integer> resultadosEsperados = new HashMap<String, Integer>();
 		resultadosEsperados.put("A", 1);
 		resultadosEsperados.put("B", 5);
@@ -35,7 +35,6 @@ public class IndexOfTest {
 	@ParameterizedTest(name="Posición de {0} en lista que no aparece")
 	@ValueSource(strings= {"A", "M", "Z", "@", "["})
 	public void IndexOfSNoEnLista(String s) {
-		
 		this.lista = new SingleLinkedListImpl<String>("J", "U", "E", "V", "E", "S");
 		
 		assertThrows(NoSuchElementException.class, () ->{

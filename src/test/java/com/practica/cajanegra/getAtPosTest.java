@@ -48,7 +48,7 @@ class getAtPosTest {
 		});
 	}
 	
-	//posición mayor que la longitus de la cadena
+	//posición mayor que la longitud de la cadena
 	public void assertThrowsExceptionMayorSize(int pos) {
 		assertThrows(IllegalArgumentException.class, () -> {
 			this.lista.getAtPos(6);

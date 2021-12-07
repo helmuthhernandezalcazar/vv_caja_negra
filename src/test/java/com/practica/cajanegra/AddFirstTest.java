@@ -10,7 +10,7 @@ public class AddFirstTest {
 	private SingleLinkedListImpl<String> lista;
 	
 	@BeforeEach
-	public void crearLista() {
+	public void setUp() {
 		this.lista = new SingleLinkedListImpl<String>("A", "S", "C", "I");
 	}
 	
@@ -19,6 +19,7 @@ public class AddFirstTest {
 	public void addFirst(String s) {
 		this.lista.addFirst(s);
 		assertEquals("["+ s + ", A, S, C, I]", this.lista.toString());	
+		assertEquals(5, this.lista.size());
 	}
 	
 }

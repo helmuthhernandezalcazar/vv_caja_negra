@@ -1,4 +1,5 @@
 package com.practica.cajanegra;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -15,7 +16,6 @@ public class addLastTest {
 	public void setUp() {
 		this.miLista = new SingleLinkedListImpl<>("A", "B", "C", "M", "Y", "Z");
 	}
-	
 	
 	@DisplayName("Test addLast()")
 	@ParameterizedTest(name="Add Last {0} in list")

@@ -14,8 +14,8 @@ class ReverseTest {
 	public void reverse() {
 		this.lista = new SingleLinkedListImpl<String>("A", "S", "C", "I");
 		
-		assertEquals(this.lista.reverse().toString(), "[I, C, S, A]");
-		assertEquals(this.lista.toString(), "[A, S, C, I]");
+		assertEquals("[I, C, S, A]", this.lista.reverse().toString());
+		assertEquals("[A, S, C, I]", this.lista.toString());
 	}
 	
 	@DisplayName("Reverse con lista vacía")
@@ -23,8 +23,8 @@ class ReverseTest {
 	public void reverseListaVacia() {
 		this.lista = new SingleLinkedListImpl<String>();
 		
-		assertEquals(this.lista.reverse().toString(), "[]");
-		assertEquals(this.lista.toString(), "[]");
+		assertEquals("[]", this.lista.reverse().toString());
+		assertEquals("[]", this.lista.toString());
 	}
 	
 	@DisplayName("Reverse con un elemento en la lista")
@@ -32,7 +32,7 @@ class ReverseTest {
 	public void reverseListaUnElemento() {
 		this.lista = new SingleLinkedListImpl<String>("A");
 		
-		assertEquals(this.lista.reverse().toString(), "[A]");
-		assertEquals(this.lista.toString(), "[A]");
+		assertEquals("[A]", this.lista.reverse().toString());
+		assertEquals("[A]", this.lista.toString());
 	}
 }

@@ -16,7 +16,6 @@ public class isEmptyTest {
 	@DisplayName("isEmptyVacia")
 	@Test
 	public void isEmptyVacia() {
-		System.out.println(this.miListaVacia.size());
 		assertTrue(this.miListaVacia.isEmpty());
 	}
 	

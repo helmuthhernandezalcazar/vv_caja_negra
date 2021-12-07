@@ -25,19 +25,16 @@ public class removeLastTest {
 	public void excepcionListaVacia() {
 		this.miListaVacia = new SingleLinkedListImpl<>();
 		assertThrows(EmptyCollectionException.class, () -> {
-		String elemento = this.miListaVacia.removeLast();
-	  });
-	 
+			String elemento = this.miListaVacia.removeLast();
+		});
 	}
 	
 	@DisplayName("Test removeLast()")
 	@Test
 	public void removeLast() throws EmptyCollectionException {
-		
 		String last = this.miLista.removeLast();
 		assertEquals(last, "Z");
 		assertEquals("[A, B, C, M, Y]", this.miLista.toString());
-		assertEquals(5, miLista.size());
-
+		assertEquals(5, this.miLista.size());
 	}
 }
