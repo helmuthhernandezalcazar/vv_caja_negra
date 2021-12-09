@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
@@ -43,6 +44,8 @@ private SingleLinkedListImpl<String> lista;
 	}
 	
 	@DisplayName("Test addNTimesNMenorCero()")
+	@ParameterizedTest(name="AddNTimes {0} in list")
+	@ValueSource(strings= {"@", "A", "B", "M", "Y", "Z", "["})
     public void addNTimesNMenorCero(String s) {
         assertThrows(IllegalArgumentException.class, () -> {
             this.lista.addNTimes(s, -1);
