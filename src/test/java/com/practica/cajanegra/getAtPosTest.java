@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
@@ -13,6 +14,7 @@ import com.cajanegra.SingleLinkedListImpl;
 
 class getAtPosTest {
 	private SingleLinkedListImpl<String> lista;
+	private SingleLinkedListImpl<String> listaVacia = new SingleLinkedListImpl<String>();
 	
 	@BeforeEach
 	public void setUp() {
@@ -34,25 +36,27 @@ class getAtPosTest {
 		assertEquals(res.get(i), this.lista.getAtPos(i));
 	}
 
-	//no se encuentra el elemento
-	public void assertThrowsExceptionNoHay(int pos) {
+	@DisplayName("Test getAtPos cuando no hay")
+	@Test
+	public void getAtPosNoHay() {
 		assertThrows(IllegalArgumentException.class, () -> {
-			this.lista.isEmpty();
+			this.listaVacia.getAtPos(1);
 		});		
 	}
-	
-	//posición menor que cero
-	public void assertThrowsExceptionMenorCero(int pos) {	
+
+	@DisplayName("Test getAtPos menor que cero")
+	@Test
+	public void getAtPosMenorCero() {	
 		assertThrows(IllegalArgumentException.class, () -> {
 			this.lista.getAtPos(-1);
 		});
 	}
-	
-	//posición mayor que la longitud de la cadena
-	public void assertThrowsExceptionMayorSize(int pos) {
+
+	@DisplayName("Test getAtPos mayor que size")
+	@Test
+	public void getAtPosMayorSize() {
 		assertThrows(IllegalArgumentException.class, () -> {
-			this.lista.getAtPos(6);
+			this.lista.getAtPos(7);
 		});
-		
 	}	
 }
