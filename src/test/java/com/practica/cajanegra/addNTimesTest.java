@@ -41,4 +41,11 @@ private SingleLinkedListImpl<String> lista;
 		assertEquals(cadena , this.lista.toString());
 		assertEquals(newSize, this.lista.size());
 	}
+	
+	@DisplayName("Test addNTimesNMenorCero()")
+    public void addNTimesNMenorCero(String s) {
+        assertThrows(IllegalArgumentException.class, () -> {
+            this.lista.addNTimes(s, -1);
+        });
+    }
 }
