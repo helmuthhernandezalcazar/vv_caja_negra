@@ -10,7 +10,8 @@ import org.junit.jupiter.params.provider.ValueSource;
 import com.cajanegra.SingleLinkedListImpl;
 
 public class addNTimesTest {
-private SingleLinkedListImpl<String> lista;
+	
+	private SingleLinkedListImpl<String> lista;
 	
 	@BeforeEach
 	public void setUp() {
@@ -43,6 +44,8 @@ private SingleLinkedListImpl<String> lista;
 	}
 	
 	@DisplayName("Test addNTimesNMenorCero()")
+	@ParameterizedTest(name="AddNTimes {0} in list")
+	@ValueSource(strings= {"@", "A", "B", "M", "Y", "Z", "["})
     public void addNTimesNMenorCero(String s) {
         assertThrows(IllegalArgumentException.class, () -> {
             this.lista.addNTimes(s, -1);

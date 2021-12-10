@@ -7,10 +7,11 @@ import org.junit.jupiter.api.Test;
 import com.cajanegra.SingleLinkedListImpl;
 
 class ReverseTest {
+	
 	private SingleLinkedListImpl<String> lista;
 	
-	@DisplayName("Reverse")
 	@Test
+	@DisplayName("Reverse")
 	public void reverse() {
 		this.lista = new SingleLinkedListImpl<String>("A", "S", "C", "I");
 		
@@ -18,8 +19,8 @@ class ReverseTest {
 		assertEquals("[A, S, C, I]", this.lista.toString());
 	}
 	
-	@DisplayName("Reverse con lista vacía")
 	@Test
+	@DisplayName("Reverse con lista vacía")
 	public void reverseListaVacia() {
 		this.lista = new SingleLinkedListImpl<String>();
 		
@@ -27,8 +28,8 @@ class ReverseTest {
 		assertEquals("[]", this.lista.toString());
 	}
 	
-	@DisplayName("Reverse con un elemento en la lista")
 	@Test
+	@DisplayName("Reverse con un elemento en la lista")
 	public void reverseListaUnElemento() {
 		this.lista = new SingleLinkedListImpl<String>("A");
 		

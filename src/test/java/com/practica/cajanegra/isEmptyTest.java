@@ -13,14 +13,14 @@ public class isEmptyTest {
 	private SingleLinkedListImpl<String> miListaVacia = new SingleLinkedListImpl<>();
 	private SingleLinkedListImpl<String> miListaNoVacia = new SingleLinkedListImpl<>("A", "B", "M", "Y", "Z");
 	
-	@DisplayName("isEmptyVacia")
 	@Test
+	@DisplayName("isEmptyVacia")
 	public void isEmptyVacia() {
 		assertTrue(this.miListaVacia.isEmpty());
 	}
 	
-	@DisplayName("isEmptyNoVacia")
 	@Test
+	@DisplayName("isEmptyNoVacia")
 	public void isEmptyNoVacia() {
 		assertFalse(this.miListaNoVacia.isEmpty());
 	}
