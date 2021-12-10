@@ -37,7 +37,7 @@ public class IndexOfTest {
 	public void IndexOfSNoEnLista(String s) {
 		this.lista = new SingleLinkedListImpl<String>("J", "U", "E", "V", "E", "S");
 		
-		assertThrows(NoSuchElementException.class, () ->{
+		assertThrows(NoSuchElementException.class, () -> {
 			lista.indexOf(s);
 		});
 	}
