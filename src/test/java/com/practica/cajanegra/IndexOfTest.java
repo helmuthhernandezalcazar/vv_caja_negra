@@ -33,7 +33,7 @@ public class IndexOfTest {
 	}
 	
 	@ParameterizedTest(name="Posición de {0} en lista que no aparece")
-	@ValueSource(strings= {"A", "M", "Z", "@", "["})
+	@ValueSource(strings= {"A", "B", "M", "Y", "Z", "@", "["})
 	public void IndexOfSNoEnLista(String s) {
 		this.lista = new SingleLinkedListImpl<String>("J", "U", "E", "V", "E", "S");
 		
