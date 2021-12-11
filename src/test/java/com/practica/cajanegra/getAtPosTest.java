@@ -12,7 +12,8 @@ import org.junit.jupiter.params.provider.ValueSource;
 
 import com.cajanegra.SingleLinkedListImpl;
 
-class getAtPosTest {
+public class getAtPosTest {
+	
 	private SingleLinkedListImpl<String> lista;
 	private SingleLinkedListImpl<String> listaVacia = new SingleLinkedListImpl<String>();
 	
@@ -36,24 +37,24 @@ class getAtPosTest {
 		assertEquals(res.get(i), this.lista.getAtPos(i));
 	}
 
-	@DisplayName("Test getAtPos cuando no hay")
 	@Test
+	@DisplayName("Test getAtPos cuando no hay")
 	public void getAtPosNoHay() {
 		assertThrows(IllegalArgumentException.class, () -> {
 			this.listaVacia.getAtPos(1);
 		});		
 	}
 
-	@DisplayName("Test getAtPos menor que cero")
 	@Test
+	@DisplayName("Test getAtPos menor que cero")
 	public void getAtPosMenorCero() {	
 		assertThrows(IllegalArgumentException.class, () -> {
 			this.lista.getAtPos(-1);
 		});
 	}
 
-	@DisplayName("Test getAtPos mayor que size")
 	@Test
+	@DisplayName("Test getAtPos mayor que size")
 	public void getAtPosMayorSize() {
 		assertThrows(IllegalArgumentException.class, () -> {
 			this.lista.getAtPos(7);

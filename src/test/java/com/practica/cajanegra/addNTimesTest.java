@@ -11,7 +11,8 @@ import org.junit.jupiter.params.provider.ValueSource;
 import com.cajanegra.SingleLinkedListImpl;
 
 public class addNTimesTest {
-private SingleLinkedListImpl<String> lista;
+	
+	private SingleLinkedListImpl<String> lista;
 	
 	@BeforeEach
 	public void setUp() {

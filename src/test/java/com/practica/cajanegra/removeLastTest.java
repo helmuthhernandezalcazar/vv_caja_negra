@@ -6,12 +6,12 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.junit.rules.ExpectedException;
 
 import com.cajanegra.EmptyCollectionException;
 import com.cajanegra.SingleLinkedListImpl;
 
 public class removeLastTest {
+	
 	private SingleLinkedListImpl<String> miLista;
 	private SingleLinkedListImpl<String> miListaVacia;
 	
@@ -20,8 +20,8 @@ public class removeLastTest {
 		this.miLista = new SingleLinkedListImpl<>("A", "B", "C", "M", "Y", "Z");
 	}
 	
-	@DisplayName("Excepción lista vacia")
 	@Test
+	@DisplayName("Excepción lista vacia")
 	public void excepcionListaVacia() {
 		this.miListaVacia = new SingleLinkedListImpl<>();
 		assertThrows(EmptyCollectionException.class, () -> {
@@ -29,8 +29,8 @@ public class removeLastTest {
 		});
 	}
 	
-	@DisplayName("Test removeLast()")
 	@Test
+	@DisplayName("Test removeLast()")
 	public void removeLast() throws EmptyCollectionException {
 		String last = this.miLista.removeLast();
 		assertEquals(last, "Z");
