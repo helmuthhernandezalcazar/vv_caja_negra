@@ -30,7 +30,7 @@ public class addAtPosTest {
 		});	
 	}
 	
-	@ParameterizedTest(name="Add at Pos Last {0} in list")
+	@ParameterizedTest(name="Add at Pos {0} in list")
 	@ValueSource(strings= {"@", "A", "B", "M", "Y", "Z", "["})
 	public void addAtPosInicial(String s) {
 		this.miLista.addAtPos(s, 1);
@@ -38,7 +38,7 @@ public class addAtPosTest {
 		assertEquals(this.tamanyoInicial + 1, this.miLista.size());
 	}
 	
-	@ParameterizedTest(name="Add at Pos Last {0} in list")
+	@ParameterizedTest(name="Add at Pos {0} in list")
 	@ValueSource(strings= {"@", "A", "B", "M", "Y", "Z", "["})
 	public void addAtPosInicialMasUno(String s) {
 		this.miLista.addAtPos(s, 2);
@@ -46,7 +46,7 @@ public class addAtPosTest {
 		assertEquals(this.tamanyoInicial + 1, this.miLista.size());
 	}
 	
-	@ParameterizedTest(name="Add at Pos Last {0} in list")
+	@ParameterizedTest(name="Add at Pos {0} in list")
 	@ValueSource(strings= {"@", "A", "B", "M", "Y", "Z", "["})
 	public void addAtPosFinalMenosUno(String s) {
 		this.miLista.addAtPos(s, 5);
@@ -54,7 +54,7 @@ public class addAtPosTest {
 		assertEquals(this.tamanyoInicial + 1, this.miLista.size());
 	}
 	
-	@ParameterizedTest(name="Add at Pos Last {0} in list")
+	@ParameterizedTest(name="Add at Pos {0} in list")
 	@ValueSource(strings= {"@", "A", "B", "M", "Y", "Z", "["})
 	public void addAtPosFinal(String s) {
 		this.miLista.addAtPos(s, 6);
@@ -62,7 +62,7 @@ public class addAtPosTest {
 		assertEquals(this.tamanyoInicial + 1, this.miLista.size());
 	}
 	
-	@ParameterizedTest(name="Add at Pos Last {0} in list")
+	@ParameterizedTest(name="Add at Pos {0} in list")
 	@ValueSource(strings= {"@", "A", "B", "M", "Y", "Z", "["})
 	public void addAtPosNumeroElevado(String s) {
 		this.miLista.addAtPos(s, 1000);
